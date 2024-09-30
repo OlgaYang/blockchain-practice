@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with Smart Contract</title>
+    <script type="module">
+        import { sendNFT, checkBalance } from './interactContract.js';
+
+        const from = '0x80D7eBD09d72a3F8a259f7b42355878794461d5b'
+        const to = '0x8c7FCcC3a250dbc7dBD0c9DFB1edacc43D5B1ac8'
+
+        async function clickSendNFT() {
+            sendNFT(from, to);
+        }
+
+        async function clickCheckBalance() {
+            checkBalance(to);
+        }
+
+        document.getElementById('sendTransaction').onclick = clickSendNFT;
+        document.getElementById('checkBalance').onclick = clickCheckBalance;
+    </script>
+
+<body>
+    <h1>Interact with Smart Contract</h1>
+    <button id="sendTransaction">Send Transaction</button>
+    <button id="checkBalance">check Balance</button>
+</body>
+
+</html>
