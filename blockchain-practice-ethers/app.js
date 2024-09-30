@@ -1,7 +1,7 @@
 const { ethers } = require("ethers");
 require('dotenv').config();
 
-const infuraUrl = 'https://sepolia.infura.io/v3/c06236df5fa24aa39dfa7044407fcf0f';
+const infuraUrl = 'https://sepolia.infura.io/v3/' + process.env.APIKey;
 const provider = new ethers.JsonRpcProvider(infuraUrl);
 
 (async () => {
