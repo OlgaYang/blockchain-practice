@@ -22,10 +22,13 @@ Run server
 npx http-server
 ```
 - Enter this url (http://192.168.1.103:8080/web/interactWithContract.html)
-- click button "Send NFT" => console will error because no more NFT balance
+- click button "Send NFT" => console will got error because no more NFT balance
 - click button "check Balance" => console will show '1n'
 
 ### Run to Node.js (use private key)
 ```
 node node .\interactContract.js
 ```
+
+## Reference
+- ethers v6: https://docs.ethers.org/v6/getting-started/#starting-contracts
